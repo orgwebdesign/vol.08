@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOL.08 — Plateforme B2B d'Ameublement & Décoration Marocaine</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="VOL.08 est une plateforme B2B fermée et exclusive dédiée à la distribution de mobilier et d'objets de décoration haut de gamme sourcés avec exigence au Maroc. Accès réservé aux professionnels.">
+  <meta name="keywords"
+    content="VOL.08, B2B Maroc, grossiste meuble marocain, sourcing mobilier, décoration artisanale haut de gamme, design marocain, ameublement B2B">
+  <meta name="author" content="VOL.08">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- 1. TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="wrapper top-bar-container">
+      <div class="top-bar-left">
+        <a href="#" class="top-bar-link" id="langToggle">FR</a>
+        <span style="color: var(--color-grey-border);">|</span>
+        <a href="#" class="top-bar-link" id="langToggleEn">EN</a>
+      </div>
+      <div class="top-bar-center" aria-label="Annonces VOL.08">
+        <div class="top-bar-static text-uppercase">MOBILIER D'EXTÉRIEUR JUSQU'À 40 %</div>
+      </div>
+      <div class="top-bar-right text-uppercase">
+        <a href="#contact" class="top-bar-link">Contact</a>
+        <a href="#help" class="top-bar-link">Support</a>
+        <a href="#legal" class="top-bar-link">Terms</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN HEADER -->
+  <header class="main-header">
+    <div class="wrapper header-container">
+
+      <!-- À gauche : Recherche -->
+      <div class="header-search" id="searchTrigger">
+        <i data-lucide="search" style="width: 18px; height: 18px;" aria-hidden="true"></i>
+        <input type="text" placeholder="Rechercher" class="search-input-mock" id="searchInput"
+          aria-label="Recherche sur le site">
+        <a href="#b2b" class="header-icon-link mobile-account-link" aria-label="Compte professionnel / Accès B2B">
+          <i data-lucide="user" style="width: 18px; height: 18px;"></i>
+        </a>
+      </div>
+
+      <!-- Centre : Logo -->
+      <div class="header-logo-container">
+        <a href="#" class="logo-link" id="logoLink" aria-label="Accueil VOL.08">
+          <img src="assets/img/logo Vol.08.svg" alt="VOL.08" class="header-logo"
+            style="height:32px;width:auto;display:block;object-fit:contain;">
+        </a>
+      </div>
+
+      <!-- À droite : Icônes -->
+      <div class="header-icons">
+        <!-- Compte / Accès B2B -->
+        <a href="#b2b" class="header-icon-link" id="iconAccount" aria-label="Compte professionnel / Accès B2B">
+          <i data-lucide="user" style="width: 22px; height: 22px;"></i>
+        </a>
+        <!-- Favoris / Projets -->
+        <button type="button" class="header-icon-button" id="iconFavorites" aria-label="Ouvrir le menu"
+          aria-expanded="false" aria-controls="mobileNavMenu">
+          <i data-lucide="heart" class="desktop-favorite-icon" style="width: 22px; height: 22px;"></i>
+          <i data-lucide="menu" class="mobile-menu-icon" style="width: 22px; height: 22px;"></i>
+          <span class="icon-badge">0</span>
+        </button>
+        <!-- Devis / Panier -->
+        <a href="#devis" class="header-icon-link" id="iconCart" aria-label="Demande de devis en cours">
+          <i data-lucide="store" style="width: 22px; height: 22px;"></i>
+          <span class="icon-badge" id="devisBadge">0</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. NAVIGATION -->
+  <nav class="main-nav" aria-label="Navigation principale">
+    <div class="wrapper nav-container">
+      <ul class="nav-list" id="mobileNavMenu">
+        <li class="nav-item has-mega">
+          <a href="#nouveautes" class="nav-link" id="navNouveautes">Nouveautés</a>
+          <!-- 4. MEGA MENU -->
+          <div class="mega-menu" id="megaMenuNouveautes" aria-hidden="true">
+            <div class="mega-column">
+              <h4>Parcourir</h4>
+              <ul>
+                <li><a href="#nouveautes">Voir tout</a></li>
+                <li><a href="#mobilier">Mobilier</a></li>
+                <li><a href="#decoration">Décoration</a></li>
+                <li><a href="#luminaires">Luminaires</a></li>
+                <li><a href="#accessoires">Accessoires</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>Univers</h4>
+              <ul>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#inspirations">Inspirations</a></li>
+                <li><a href="#sourcing">Sourcing &amp; contrôle qualité</a></li>
+              </ul>
+            </div>
+            <div class="mega-column">
+              <h4>Design Stories</h4>
+              <ul>
+                <li><a href="#stories-marrakech">Marrakech Studio</a></li>
+                <li><a href="#stories-atlas">Atlas Collection</a></li>
+                <li><a href="#stories-retail">Retail Spaces</a></li>
+                <li><a href="#stories-hospitality">Hospitality Moodboards</a></li>
+              </ul>
+            </div>
+            <div class="mega-column mega-promo">
+              <img src="https://d392ke4nwqmbdz.cloudfront.net/Images/Vol08/Acceuil1.webp"
+                alt="Nouvelle sélection VOL.08" class="mega-promo-img">
+              <div class="mega-promo-title">Nouvelle sélection VOL.08 — Pièces sourcées au Maroc</div>
+              <a href="#b2b" class="mega-promo-link">Accéder au catalogue</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="#mobilier" class="nav-link">Mobilier</a></li>
+        <li class="nav-item"><a href="#decoration" class="nav-link">Décoration</a></li>
+        <li class="nav-item"><a href="#luminaires" class="nav-link">Luminaires</a></li>
+        <li class="nav-item"><a href="#accessoires" class="nav-link">Accessoires</a></li>
+        <li class="nav-item"><a href="#inspirations" class="nav-link">Inspirations</a></li>
+        <li class="nav-item"><a href="#sourcing" class="nav-link">Sourcing</a></li>
+        <li class="nav-item"><a href="#b2b" class="nav-link cta-nav" id="navAccessCta">Demande d'accès</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 5. HERO SECTION -->
+  <section class="hero" aria-label="Sourcing B2B Maroc">
+    <img src="https://d392ke4nwqmbdz.cloudfront.net/Images/Vol08/HeroSection.webp"
+      alt="Intérieur contemporain avec pièces artisanales marocaines" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow text-uppercase">VOL.08 SOURCING PLATFORM</span>
+      <h1 class="hero-title">Enfin un vrai fournisseur fiable du Maroc.</h1>
+      <p class="hero-text">Une plateforme B2B fermée pour découvrir, sélectionner et commander des pièces d’ameublement
+        et de décoration sourcées avec exigence.</p>
+      <div class="hero-actions"><a href="#editorial-section" class="btn btn-secondary-outline"
+          id="heroBtnSecondary">Découvrir l’univers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CATEGORIES HORIZONTALES -->
+  <section class="categories-section section-padding" id="categories" aria-label="Catégories principales">
+    <div class="wrapper">
+      <h2 class="section-title-dwr">Un catalogue pensé pour les professionnels</h2>
+
+      <div class="categories-grid">
+        <!-- Mobilier -->
+        <a href="#mobilier" class="category-card" id="catMobilier">
+          <div class="category-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&w=500&q=80"
+              alt="Catégorie Mobilier">
+          </div>
+          <span class="category-label text-uppercase">Mobilier</span>
+        </a>
+
+        <!-- Décoration -->
+        <a href="#decoration" class="category-card" id="catDecoration">
+          <div class="category-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=500&q=80"
+              alt="Catégorie Décoration">
+          </div>
+          <span class="category-label text-uppercase">Décoration</span>
+        </a>
+
+        <!-- Luminaires -->
+        <a href="#luminaires" class="category-card" id="catLuminaires">
+          <div class="category-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=500&q=80"
+              alt="Catégorie Luminaires">
+          </div>
+          <span class="category-label text-uppercase">Luminaires</span>
+        </a>
+
+        <!-- Accessoires -->
+        <a href="#accessoires" class="category-card" id="catAccessoires">
+          <div class="category-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=500&q=80"
+              alt="Catégorie Accessoires">
+          </div>
+          <span class="category-label text-uppercase">Accessoires</span>
+        </a>
+
+        <!-- Collections -->
+        <a href="#collections" class="category-card" id="catCollections">
+          <div class="category-img-wrapper">
+            <img src="https://d392ke4nwqmbdz.cloudfront.net/Images/Vol08/Acceuil3.webp" alt="Catégorie Collections">
+          </div>
+          <span class="category-label text-uppercase">Collections</span>
+        </a>
+
+        <!-- Inspirations -->
+        <a href="#inspirations" class="category-card" id="catInspirations">
+          <div class="category-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=500&q=80"
+              alt="Catégorie Inspirations">
+          </div>
+          <span class="category-label text-uppercase">Inspirations</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BLOC ÉDITORIAL 1 — PROMESSE -->
+  <section class="editorial-section-wrapper" id="editorial-section" aria-label="Promesse VOL.08">
+    <div class="editorial-block grey-bg">
+      <div class="editorial-content-side">
+        <span class="editorial-eyebrow text-uppercase">SOURCING SÉLECTIONNÉ</span>
+        <h2 class="editorial-title">Une sélection maîtrisée, pas un catalogue sans filtre.</h2>
+        <p class="editorial-text">VOL.08 accompagne les professionnels avec une sélection structurée, des produits
+          contrôlés, des informations claires et une expérience pensée pour aller vite sans perdre le contact humain.
+        </p>
+        <a href="#sourcing" class="editorial-link-btn" id="ed1Cta">Notre méthode de sourcing</a>
+      </div>
+      <div class="editorial-image-side">
+        <img src="https://d392ke4nwqmbdz.cloudfront.net/Images/Vol08/Acceuil2.webp"
+          alt="Mobilier en bois au design minimaliste">
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BLOC ÉDITORIAL 2 — CONTRÔLE QUALITÉ -->
+  <section class="editorial-section-wrapper" aria-label="Contrôle qualité VOL.08">
+    <div class="editorial-block alt">
+      <div class="editorial-image-side">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
+          alt="Céramiques marocaines faites à la main dans un intérieur épuré">
+      </div>
+      <div class="editorial-content-side">
+        <span class="editorial-eyebrow text-uppercase">CONTRÔLE &amp; FIABILITÉ</span>
+        <h2 class="editorial-title">Digitaliser sans déshumaniser.</h2>
+        <p class="editorial-text">La plateforme facilite la recherche, les sélections, les demandes de devis et le
+          suivi, tout en gardant un accompagnement commercial humain pour sécuriser chaque échange B2B.</p>
+        <a href="#sourcing" class="editorial-link-btn" id="ed2Cta">Voir le process qualité</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. SECTION PRODUITS / APERÇU CATALOGUE -->
+  <section class="products-section section-padding" id="nouveautes" aria-label="Aperçu du catalogue">
+    <div class="wrapper">
+      <div class="collections-preview-header">
+        <h2 class="section-title-dwr">Aperçu des collections VOL.08</h2>
+      </div>
+
+      <div class="collections-preview-marquee">
+        <div class="collections-preview-track">
+          <div class="collections-preview-grid">
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80"
+                  alt="Fauteuil Atlas">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">Knoll®</span>
+                <h3 class="collection-preview-name">Fauteuil Atlas</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">15,945.00</span>
+                  <span class="collection-preview-new">12,756.00</span>
+                  <span class="collection-preview-discount">20% off</span>
+                </div>
+                <p class="collection-preview-note">41 Colors</p>
+                <p class="collection-preview-tag">NEW OPTIONS</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=900&q=80"
+                  alt="Table Rif">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">Knoll®</span>
+                <h3 class="collection-preview-name">Table Rif</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">19,256.00</span>
+                  <span class="collection-preview-new">15,404.80</span>
+                  <span class="collection-preview-discount">20% off</span>
+                </div>
+                <p class="collection-preview-note">20 Colors</p>
+                <p class="collection-preview-tag">DINING SERIES</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                  alt="Chaise Quilton">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">HAY</span>
+                <h3 class="collection-preview-name">Chaise Quilton</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">2,895.00</span>
+                  <span class="collection-preview-new">2,026.50</span>
+                  <span class="collection-preview-discount">30% off</span>
+                </div>
+                <p class="collection-preview-note">27 Colors</p>
+                <p class="collection-preview-tag">SOFT FORM</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
+                  alt="Set Palissade">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">HAY</span>
+                <h3 class="collection-preview-name">Set Palissade</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">3,195.00</span>
+                  <span class="collection-preview-new">1,917.00</span>
+                  <span class="collection-preview-discount">40% off</span>
+                </div>
+                <p class="collection-preview-note">4 Colors</p>
+                <p class="collection-preview-tag">OUTDOOR SET</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="collections-preview-grid" aria-hidden="true">
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=900&q=80"
+                  alt="Fauteuil Atlas">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">Knoll®</span>
+                <h3 class="collection-preview-name">Fauteuil Atlas</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">15,945.00</span>
+                  <span class="collection-preview-new">12,756.00</span>
+                  <span class="collection-preview-discount">20% off</span>
+                </div>
+                <p class="collection-preview-note">41 Colors</p>
+                <p class="collection-preview-tag">NEW OPTIONS</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=900&q=80"
+                  alt="Table Rif">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">Knoll®</span>
+                <h3 class="collection-preview-name">Table Rif</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">19,256.00</span>
+                  <span class="collection-preview-new">15,404.80</span>
+                  <span class="collection-preview-discount">20% off</span>
+                </div>
+                <p class="collection-preview-note">20 Colors</p>
+                <p class="collection-preview-tag">DINING SERIES</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                  alt="Chaise Quilton">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">HAY</span>
+                <h3 class="collection-preview-name">Chaise Quilton</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">2,895.00</span>
+                  <span class="collection-preview-new">2,026.50</span>
+                  <span class="collection-preview-discount">30% off</span>
+                </div>
+                <p class="collection-preview-note">27 Colors</p>
+                <p class="collection-preview-tag">SOFT FORM</p>
+              </div>
+            </article>
+
+            <article class="collection-preview-card">
+              <div class="collection-preview-media">
+                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
+                  alt="Set Palissade">
+              </div>
+              <div class="collection-preview-meta">
+                <span class="collection-preview-brand">HAY</span>
+                <h3 class="collection-preview-name">Set Palissade</h3>
+                <div class="collection-preview-pricing">
+                  <span class="collection-preview-old">3,195.00</span>
+                  <span class="collection-preview-new">1,917.00</span>
+                  <span class="collection-preview-discount">40% off</span>
+                </div>
+                <p class="collection-preview-note">4 Colors</p>
+                <p class="collection-preview-tag">OUTDOOR SET</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="collections-preview-progress" aria-hidden="true">
+        <span class="collections-preview-progress-fill"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. BLOC ACCÈS B2B -->
+  <section class="b2b-access-section section-padding" id="b2b" aria-label="Accès B2B exclusif">
+    <div class="wrapper">
+      <h2 class="b2b-title">Un accès réservé aux professionnels validés.</h2>
+      <p class="b2b-text">Les prix HT, les fiches détaillées, les minimums de commande et les devis sont disponibles
+        uniquement après validation de votre compte professionnel.</p>
+
+      <div class="b2b-steps">
+        <div class="b2b-step">
+          <span class="step-num">ÉTAPE 01</span>
+          <h3 class="step-title">Demande d’accès</h3>
+          <p class="step-desc">Soumission du formulaire de demande d'accès en ligne avec vos informations de société
+            (Siret/Kbis/TVA).</p>
+        </div>
+        <div class="b2b-step">
+          <span class="step-num">ÉTAPE 02</span>
+          <h3 class="step-title">Validation commerciale</h3>
+          <p class="step-desc">Notre service commercial étudie vos coordonnées et votre éligibilité sous 24 à 48h
+            ouvrées.</p>
+        </div>
+        <div class="b2b-step">
+          <span class="step-num">ÉTAPE 03</span>
+          <h3 class="step-title">Catalogue privé &amp; devis</h3>
+          <p class="step-desc">Une fois validé, vous accédez aux prix de gros, aux stocks disponibles et à la création
+            de paniers de devis.</p>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn btn-primary-white" id="b2bBtn">Demander mon accès professionnel</a>
+    </div>
+  </section>
+
+  <!-- 11. SECTION AIDE (WE'RE HERE TO HELP) -->
+  <section class="help-section section-padding" id="help" aria-label="Assistance &amp; Support">
+    <div class="wrapper">
+      <h2 class="section-title-dwr">Nous sommes là pour vous accompagner</h2>
+
+      <div class="help-grid">
+        <!-- Demande d’accès -->
+        <a href="#b2b" class="help-card" id="helpAccess">
+          <div class="help-card-base">
+            <div class="help-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                alt="Demande d’accès">
+            </div>
+            <div class="help-card-body">
+              <h3 class="help-card-title">Demande d’accès</h3>
+            </div>
+          </div>
+          <div class="help-card-hover">
+            <h3 class="help-card-title help-card-title-hover">Demande d’accès</h3>
+            <div class="help-card-details">
+              <span>Validation B2B</span>
+              <span>Compte professionnel</span>
+              <span>Accès catalogue privé</span>
+            </div>
+          </div>
+          <div class="help-plus-btn" aria-hidden="true">
+            <span class="help-plus-symbol">+</span>
+            <span class="help-close-symbol">×</span>
+          </div>
+        </a>
+
+        <!-- Assistance catalogue -->
+        <a href="#contact" class="help-card" id="helpCatalog">
+          <div class="help-card-base">
+            <div class="help-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                alt="Assistance catalogue">
+            </div>
+            <div class="help-card-body">
+              <h3 class="help-card-title">Assistance catalogue</h3>
+            </div>
+          </div>
+          <div class="help-card-hover">
+            <h3 class="help-card-title help-card-title-hover">Assistance catalogue</h3>
+            <div class="help-card-details">
+              <span>Sélections produits</span>
+              <span>Fiches techniques</span>
+              <span>Support catalogue</span>
+            </div>
+          </div>
+          <div class="help-plus-btn" aria-hidden="true">
+            <span class="help-plus-symbol">+</span>
+            <span class="help-close-symbol">×</span>
+          </div>
+        </a>
+
+        <!-- Design concierge -->
+        <a href="#contact" class="help-card" id="helpConcierge">
+          <div class="help-card-base">
+            <div class="help-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
+                alt="Design concierge">
+            </div>
+            <div class="help-card-body">
+              <h3 class="help-card-title">Design concierge</h3>
+            </div>
+          </div>
+          <div class="help-card-hover">
+            <h3 class="help-card-title help-card-title-hover">Design concierge</h3>
+            <div class="help-card-details">
+              <span>Accompagnement projet</span>
+              <span>Sélection sur mesure</span>
+              <span>Conseil d’aménagement</span>
+            </div>
+          </div>
+          <div class="help-plus-btn" aria-hidden="true">
+            <span class="help-plus-symbol">+</span>
+            <span class="help-close-symbol">×</span>
+          </div>
+        </a>
+
+        <!-- Devis & commandes -->
+        <a href="#devis" class="help-card" id="helpQuotes">
+          <div class="help-card-base">
+            <div class="help-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80"
+                alt="Devis et commandes">
+            </div>
+            <div class="help-card-body">
+              <h3 class="help-card-title">Devis &amp; commandes</h3>
+            </div>
+          </div>
+          <div class="help-card-hover">
+            <h3 class="help-card-title help-card-title-hover">Devis &amp; commandes</h3>
+            <div class="help-card-details">
+              <span>Devis rapide</span>
+              <span>Suivi de commande</span>
+              <span>Assistance commerciale</span>
+            </div>
+          </div>
+          <div class="help-plus-btn" aria-hidden="true">
+            <span class="help-plus-symbol">+</span>
+            <span class="help-close-symbol">×</span>
+          </div>
+        </a>
+
+        <!-- Rendez-vous commercial -->
+        <a href="#contact" class="help-card" id="helpMeeting">
+          <div class="help-card-base">
+            <div class="help-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+                alt="Rendez-vous commercial">
+            </div>
+            <div class="help-card-body">
+              <h3 class="help-card-title">Rendez-vous commercial</h3>
+            </div>
+          </div>
+          <div class="help-card-hover">
+            <h3 class="help-card-title help-card-title-hover">Rendez-vous commercial</h3>
+            <div class="help-card-details">
+              <span>Planifier un échange</span>
+              <span>Visio ou showroom</span>
+              <span>Créneau dédié</span>
+            </div>
+          </div>
+          <div class="help-plus-btn" aria-hidden="true">
+            <span class="help-plus-symbol">+</span>
+            <span class="help-close-symbol">×</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER PREMIUM -->
+  <footer class="footer" id="contact">
+    <div class="wrapper">
+      <div class="footer-top">
+
+        <!-- Colonne 1: Newsletter -->
+        <div class="footer-col">
+          <h4>S'abonner</h4>
+          <p class="footer-newsletter-text">Recevez nos sélections, inspirations et nouveautés B2B.</p>
+          <form class="newsletter-form" id="newsletterForm"
+            onsubmit="event.preventDefault(); alert('Inscription enregistrée (simulation).');">
+            <input type="email" placeholder="Votre adresse email" class="newsletter-input" required
+              aria-label="Adresse email pour la newsletter">
+            <button type="submit" class="newsletter-submit" id="btnNewsletterSubmit">S’inscrire</button>
+          </form>
+        </div>
+
+        <!-- Colonne 2: VOL.08 -->
+        <div class="footer-col">
+          <h4>VOL.08</h4>
+          <ul>
+            <li><a href="#editorial-section">Univers</a></li>
+            <li><a href="#sourcing">Sourcing</a></li>
+            <li><a href="#sourcing">Contrôle qualité</a></li>
+            <li><a href="#categories">Collections</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3: Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#b2b">Demande d'accès</a></li>
+            <li><a href="#devis">Devis en ligne</a></li>
+            <li><a href="#contact">Prendre RDV</a></li>
+            <li><a href="#help">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4: Légal -->
+        <div class="footer-col" id="legal">
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="#mentions">Mentions légales</a></li>
+            <li><a href="#confidentialite">Confidentialité</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#cgu">CGU B2B</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 5: Catalogue -->
+        <div class="footer-col footer-catalogue">
+          <h4>Catalogue</h4>
+          <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=400&q=80"
+            alt="Couverture catalogue VOL.08" class="footer-catalogue-img">
+          <a href="#contact" class="footer-catalogue-link"
+            onclick="alert('Le catalogue au format PDF vous sera envoyé sur demande commerciale. (Simulation)');">Demander
+            le catalogue</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VOL.08 by <a href="https://havetdigital.fr/" target="_blank" rel="noopener noreferrer">Havet
+            Digital</a> — Plateforme B2B fermée de distribution d'ameublement et décoration.</p>
+        <p>Une plateforme pensée pour les acheteurs, les prescripteurs et les commerciaux terrain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. CHATBOT FLOTTANT -->
+  <div class="chatbot-container">
+    <!-- Fenêtre Chatbot -->
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <span class="chatbot-title">Assistant VOL.08</span>
+        <button class="chatbot-close" id="chatbotCloseBtn" aria-label="Fermer la discussion">&times;</button>
+      </div>
+      <div class="chatbot-body">
+        <p class="chatbot-message">Bonjour. Besoin d’aide pour demander un accès ou préparer une sélection ?</p>
+        <div class="chatbot-options">
+          <button class="chatbot-opt-btn" onclick="handleChatOption('Demande d\'accès professionnel')">Accès
+            professionnel</button>
+          <button class="chatbot-opt-btn" onclick="handleChatOption('Parler au support commercial')">Parler au
+            support</button>
+          <button class="chatbot-opt-btn" onclick="handleChatOption('Télécharger le catalogue PDF')">Catalogue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bulle Chatbot -->
+    <button class="chatbot-bubble" id="chatbotToggleBtn" aria-label="Ouvrir le chat avec le support">
+      <i data-lucide="message-square" style="width: 24px; height: 24px;"></i>
+    </button>
+  </div>
+
+  <!-- JavaScript interactif de base -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // --- MOBILE MEGA MENU TOGGLE ---
+    const mainNav = document.querySelector('.main-nav');
+    const mobileNavToggle = document.getElementById('iconFavorites');
+    const mobileMegaMenuBreakpoint = window.matchMedia('(max-width: 768px)');
+
+    function closeMobileNavMenu() {
+      if (!mainNav || !mobileNavToggle) return;
+      mainNav.classList.remove('open');
+      mobileNavToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (mobileNavToggle && mainNav) {
+      mobileNavToggle.addEventListener('click', (event) => {
+        if (!mobileMegaMenuBreakpoint.matches) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        const isOpen = mainNav.classList.toggle('open');
+        mobileNavToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!mobileMegaMenuBreakpoint.matches) return;
+        closeMobileNavMenu();
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!mobileMegaMenuBreakpoint.matches) return;
+      if (mobileNavToggle && mobileNavToggle.contains(event.target)) return;
+      if (mainNav && mainNav.contains(event.target)) return;
+      closeMobileNavMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (!mobileMegaMenuBreakpoint.matches) {
+        closeMobileNavMenu();
+      }
+    });
+
+    // --- CHATBOT TOGGLE ---
+    const chatbotToggleBtn = document.getElementById('chatbotToggleBtn');
+    const chatbotCloseBtn = document.getElementById('chatbotCloseBtn');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+
+    chatbotToggleBtn.addEventListener('click', () => {
+      chatbotWindow.classList.toggle('active');
+    });
+
+    chatbotCloseBtn.addEventListener('click', () => {
+      chatbotWindow.classList.remove('active');
+    });
+
+    function handleChatOption(optionName) {
+      alert(`Option sélectionnée : "${optionName}". Un commercial va vous répondre. (Simulation)`);
+      chatbotWindow.classList.remove('active');
+    }
+
+    // --- SELECTION COUNTER (FAVORIS / DEVIS) ---
+    let selectionCount = 0;
+    const devisBadge = document.getElementById('devisBadge');
+
+    function addToSelection(productName) {
+      selectionCount++;
+      devisBadge.textContent = selectionCount;
+      // Afficher un badge sur les favoris aussi
+      const favBadge = document.querySelector('.header-icons a[href="#favoris"] .icon-badge');
+      if (favBadge) {
+        favBadge.textContent = selectionCount;
+      }
+      alert(`"${productName}" a été ajouté à votre sélection de devis.`);
+    }
+  </script>
+
+</body>
+
+</html>
