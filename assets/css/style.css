@@ -409,6 +409,13 @@ img {
   justify-content: flex-end;
 }
 
+.header-access-btn {
+  padding: 12px 22px;
+  font-size: 11px;
+  white-space: nowrap;
+  min-height: 44px;
+}
+
 #iconFavorites {
   display: none;
 }
@@ -510,7 +517,7 @@ img {
 }
 
 .nav-item-cta {
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -1797,6 +1804,10 @@ img {
     grid-column: 3;
   }
 
+  .header-access-btn {
+    display: none;
+  }
+
   #iconAccount {
     display: none;
   }
@@ -1871,6 +1882,7 @@ img {
   }
 
   .nav-item-cta {
+    display: flex;
     padding: 14px 0 6px;
     border-bottom: 0;
   }
