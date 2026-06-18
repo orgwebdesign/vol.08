@@ -13,10 +13,8 @@
   <meta name="author" content="VOL.08">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" href="assets/fonts/Grift-Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="assets/fonts/Grift-SemiBold.otf" as="font" type="font/otf" crossorigin>
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -28,23 +26,7 @@
 <body>
 
   <!-- 1. TOP ANNOUNCEMENT BAR -->
-  <div class="top-bar">
-    <div class="wrapper top-bar-container">
-      <div class="top-bar-left">
-        <a href="#" class="top-bar-link" id="langToggle">FR</a>
-        <span style="color: var(--color-grey-border);">|</span>
-        <a href="#" class="top-bar-link" id="langToggleEn">EN</a>
-      </div>
-      <div class="top-bar-center" aria-label="Annonces VOL.08">
-        <div class="top-bar-static text-uppercase">MOBILIER D'EXTÉRIEUR JUSQU'À 40 %</div>
-      </div>
-      <div class="top-bar-right text-uppercase">
-        <a href="#contact" class="top-bar-link">Contact</a>
-        <a href="#help" class="top-bar-link">Support</a>
-        <a href="#legal" class="top-bar-link">Terms</a>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- 2. MAIN HEADER -->
   <header class="main-header">
@@ -55,9 +37,6 @@
         <i data-lucide="search" style="width: 18px; height: 18px;" aria-hidden="true"></i>
         <input type="text" placeholder="Rechercher" class="search-input-mock" id="searchInput"
           aria-label="Recherche sur le site">
-        <a href="#b2b" class="header-icon-link mobile-account-link" aria-label="Compte professionnel / Accès B2B">
-          <i data-lucide="user" style="width: 18px; height: 18px;"></i>
-        </a>
       </div>
 
       <!-- Centre : Logo -->
@@ -77,15 +56,9 @@
         <!-- Favoris / Projets -->
         <button type="button" class="header-icon-button" id="iconFavorites" aria-label="Ouvrir le menu"
           aria-expanded="false" aria-controls="mobileNavMenu">
-          <i data-lucide="heart" class="desktop-favorite-icon" style="width: 22px; height: 22px;"></i>
           <i data-lucide="menu" class="mobile-menu-icon" style="width: 22px; height: 22px;"></i>
-          <span class="icon-badge">0</span>
         </button>
         <!-- Devis / Panier -->
-        <a href="#devis" class="header-icon-link" id="iconCart" aria-label="Demande de devis en cours">
-          <i data-lucide="store" style="width: 22px; height: 22px;"></i>
-          <span class="icon-badge" id="devisBadge">0</span>
-        </a>
       </div>
 
     </div>
@@ -140,8 +113,9 @@
         <li class="nav-item"><a href="#accessoires" class="nav-link">Accessoires</a></li>
         <li class="nav-item"><a href="#inspirations" class="nav-link">Inspirations</a></li>
         <li class="nav-item"><a href="#sourcing" class="nav-link">Sourcing</a></li>
-        <li class="nav-item"><a href="#b2b" class="nav-link cta-nav" id="navAccessCta">Demande d'accès</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+
+        <li class="nav-item nav-item-cta"><a href="#b2b" class="btn btn-black">Demander un accès</a></li>
       </ul>
     </div>
   </nav>
@@ -694,7 +668,9 @@
   <!-- JavaScript interactif de base -->
   <script>
     // Initialize Lucide icons
-    lucide.createIcons();
+    if (window.lucide) {
+      lucide.createIcons();
+    }
 
     // --- MOBILE MEGA MENU TOGGLE ---
     const mainNav = document.querySelector('.main-nav');
@@ -743,15 +719,20 @@
     const chatbotCloseBtn = document.getElementById('chatbotCloseBtn');
     const chatbotWindow = document.getElementById('chatbotWindow');
 
-    chatbotToggleBtn.addEventListener('click', () => {
-      chatbotWindow.classList.toggle('active');
-    });
+    if (chatbotToggleBtn && chatbotWindow) {
+      chatbotToggleBtn.addEventListener('click', () => {
+        chatbotWindow.classList.toggle('active');
+      });
+    }
 
-    chatbotCloseBtn.addEventListener('click', () => {
-      chatbotWindow.classList.remove('active');
-    });
+    if (chatbotCloseBtn && chatbotWindow) {
+      chatbotCloseBtn.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+      });
+    }
 
     function handleChatOption(optionName) {
+      if (!chatbotWindow) return;
       alert(`Option sélectionnée : "${optionName}". Un commercial va vous répondre. (Simulation)`);
       chatbotWindow.classList.remove('active');
     }
